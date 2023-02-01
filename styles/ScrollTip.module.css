@@ -1,0 +1,39 @@
+.text {
+	font-weight: 900;
+	font-size: 1rem;
+	/* letter-spacing: -10px; */
+}
+.tip {
+	border-bottom: 2px solid #ababab;
+	border-left: 2px solid #ababab;
+	transform: rotateZ(-45deg);
+	width: 10px;
+	height: 10px;
+	animation: tip infinite 2s;
+}
+.delay {
+	animation-delay: 0.2s;
+}
+.container {
+	display: inline-flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	left: 50%;
+	bottom: 2em;
+}
+@keyframes tip {
+	0% {
+		border-left-color: #ababab;
+		border-bottom-color: #ababab;
+	}
+	30% {
+		border-left-color: #fff;
+		border-bottom-color: #fff;
+	}
+	60% {
+		border-left-color: #ababab;
+		border-bottom-color: #ababab;
+	}
+}

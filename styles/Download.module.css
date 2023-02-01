@@ -1,0 +1,12 @@
+.download {
+	margin-left: 11em;
+	display: flex;
+	flex-direction: column;
+}
+.tip {
+	margin-left: 3em;
+}
+.container {
+	display: inline-flex;
+	flex-direction: row;
+}

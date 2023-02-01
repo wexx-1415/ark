@@ -1,0 +1,31 @@
+.li {
+	list-style: none;
+	/* position: absolute; */
+}
+.selector {
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	display: flex;
+	z-index: 1;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+.item {
+	transition: all 1s ease;
+	display: flex;
+	flex-direction: row;
+}
+.dot_wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+}

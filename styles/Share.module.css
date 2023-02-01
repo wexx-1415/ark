@@ -1,0 +1,66 @@
+.share {
+}
+.svg {
+	width: 42px;
+	height: 42px;
+	fill: #999999;
+	stroke: #999999;
+	transition: all 0.3s ease-out;
+	margin-left: 76px;
+}
+.svg:hover {
+	fill: #90ddff;
+	stroke: #90ddff;
+	background-color: #333333;
+}
+.box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 42px;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+}
+.open {
+	pointer-events: auto;
+	height: 42px;
+	opacity: 1;
+	visibility: visible;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	overflow: hidden;
+	z-index: 100;
+	width: 300px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.open .boxItem {
+	transform: translate3d(0, 0, 0);
+}
+.boxItem {
+	width: 119px;
+	height: 28px;
+	transform: translate3d(0, -42px, 0);
+	background-color: #90ddff;
+	transition: all 0.3s ease-out;
+}
+.imgs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	/* margin-left: 76px; */
+}
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}

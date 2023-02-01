@@ -1,0 +1,237 @@
+.wrap {
+	overflow: hidden;
+	/* padding-left: 20%; */
+	height: fit-content;
+	width: 427px;
+}
+.ani {
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+}
+.hidden .column_line::after,
+.hidden .column_line::before {
+	/* transition: rotate 0.8s step-end 0.8s; */
+	/* width: 0; */
+	height: 0;
+}
+.hidden .row_line::after,
+.hidden .row_line::before {
+	width: 0;
+}
+.close {
+	transition: all 0.5s ease;
+	transition-delay: 0.8s;
+}
+.hidden .close {
+	opacity: 0;
+	transition-delay: 0s;
+}
+.show {
+	transform: translate3d(0, 100%, 0);
+}
+.show_up {
+	transform: translate3d(0, -100%, 0);
+}
+.close_arrow {
+	background-color: rgb(119, 117, 117);
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+}
+.pos {
+	display: inline-block;
+	position: absolute;
+	bottom: 75%;
+	right: 20%;
+}
+.hidden .column_line {
+	transition: rotate 0.8s step-end;
+	rotate: -90deg;
+}
+.line {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	/* overflow: hidden; */
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+}
+.column_line::after {
+	display: block;
+	background-size: 2px 7px;
+	height: 74vh;
+	width: 2px;
+	top: 30px;
+	content: '';
+	position: absolute;
+	/* margin-left: 13px; */
+	right: 0px;
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+	background-image: linear-gradient(
+		to bottom,
+		#909090 0%,
+		#909090 14%,
+		transparent 28%
+	);
+	background-position: 0 0;
+}
+.column_line::before {
+	display: block;
+	background-size: 2px 7px;
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+
+	height: 100vh;
+	width: 2px;
+	bottom: 22px;
+	content: '';
+	position: absolute;
+	/* margin-left: 13px; */
+	right: 0px;
+	background-image: linear-gradient(
+		to bottom,
+		#909090 0%,
+		#909090 14%,
+		transparent 28%
+	);
+	background-position: 100% 100%;
+}
+.row_line::after {
+	display: block;
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+
+	background-size: 7px 2px;
+	height: 2px;
+	width: 100vw;
+	/* top: 50%; */
+	/* margin-top: 13px; */
+	content: '';
+	position: absolute;
+	left: 28px;
+	/* margin-left: 12px; */
+	background-image: linear-gradient(
+		to right,
+		#909090 0%,
+		#909090 14%,
+		transparent 28%
+	);
+	background-position: 100px 0;
+}
+.row_line::before {
+	display: block;
+	background-size: 7px 2px;
+	height: 2px;
+	width: 100vw;
+	top: 50%;
+	/* margin-top: 13px; */
+	content: '';
+	transition: all 0.8s cubic-bezier(0.21, 0.45, 0.07, 1);
+
+	position: absolute;
+	/* margin-right: 40px; */
+	right: 22px;
+	background-image: linear-gradient(
+		to right,
+		#909090 0%,
+		#909090 14%,
+		transparent 28%
+	);
+	background-position: 100% 0;
+}
+.close {
+	display: inline-block;
+}
+.close:hover .close_arrow {
+	background-color: white;
+	scale: 1.2;
+}
+.name {
+	font-size: 68px;
+	color: #fff;
+	font-family: 'SerifHeavy', sans-serif;
+}
+.eng {
+	font-size: 30px;
+	color: #fff;
+	font-family: 'Geometos', sans-serif;
+}
+.des {
+	font-size: 14px;
+	color: #fff;
+	font-family: 'SansRegular', sans-serif;
+	line-height: 2;
+	width: 427px;
+}
+.pre_ani {
+	animation: Go_Prev 0.8s forwards;
+}
+.next_ani {
+	animation: Go_Next 0.8s forwards;
+}
+@keyframes Go_Prev {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		opacity: 0;
+		transform: translate3d(20%, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		transform: translate3d(-20%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes Go_Next {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		opacity: 0;
+		transform: translate3d(-20%, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		transform: translate3d(20%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.divider_hidden.divider::after {
+	width: 0;
+}
+.divider {
+	position: relative;
+}
+.divider::after {
+	content: '';
+	display: block;
+	width: 100%;
+	right: 0;
+	height: 1px;
+	background-image: linear-gradient(
+		to left,
+		#909090 0%,
+		#909090 25%,
+		transparent 50%
+	);
+	background-size: 4px 1px;
+	background-position: 100% 0;
+	position: absolute;
+	transition: all 0.8s;
+	transition-delay: 0.8s;
+	bottom: 0;
+}
+.intro {
+	display: flex;
+	flex-direction: row;
+	top: 250px;
+	right: 160px;
+	height: 400px;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+}

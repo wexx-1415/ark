@@ -1,0 +1,28 @@
+.arrow {
+	width: 78.5px;
+	fill: #666666;
+}
+.arrow:hover {
+	fill: #f0f0f0;
+}
+.dot,
+.bot,
+.top {
+	transition: all 0.3s ease;
+}
+.arrow:hover .dot {
+	transform: scale(1.2);
+	fill: #f0f0f0;
+}
+.right:hover .bot {
+	transform: translate(-8%, 8%);
+}
+.right:hover .top {
+	transform: translate(-8%, -8%);
+}
+.left:hover .bot {
+	transform: translate(8%, 8%);
+}
+.left:hover .top {
+	transform: translate(8%, -8%);
+}

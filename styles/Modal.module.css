@@ -1,0 +1,22 @@
+.bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	opacity: 0.6;
+	background: #000;
+	height: 100%;
+	z-index: 100;
+}
+.close {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+.content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 110;
+}

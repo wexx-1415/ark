@@ -1,0 +1,11 @@
+.arrow {
+	transition: all 0.5s ease;
+	fill: #666666;
+}
+.close:hover .arrow {
+	transform: scale(1.2);
+	fill: #f0f0f0;
+}
+.close {
+	width: 70px;
+}

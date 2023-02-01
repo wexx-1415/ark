@@ -1,0 +1,51 @@
+.screen {
+	width: 100vw;
+	height: 100vh;
+	padding-left: 5.75em;
+	overflow: hidden;
+	position: relative;
+}
+.screens {
+	/* overflow: hidden; */
+	transition: all 0.5s ease;
+	height: 100vh;
+}
+.hoverBar {
+	position: absolute;
+	/* top: 0; */
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	padding-right: 2em;
+	align-items: center;
+	/* justify-content: space-between; */
+	right: 0;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+}
+.active {
+	/* background: #000; */
+	color: #22bbff;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.active::after {
+	content: '';
+	position: absolute;
+	top: 35%;
+	width: 0.3em;
+	height: 30%;
+	background: #22bbff;
+	/* opacity: 0.5; */
+	right: 0em;
+	transition: all 0.5s ease;
+}
+.bar:hover {
+	transform: translate3d(-30%, 0, 0);
+	color: #22bbff;
+}
+.bar {
+	padding: 2em;
+	transition: all 0.5s ease;
+}

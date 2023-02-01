@@ -1,0 +1,10 @@
+.text {
+	font-family: 'SansMedium', 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+		sans-serif;
+	font-size: 14px;
+}
+.sep {
+	margin: 0 10px;
+	line-height: 100%;
+	font-size: 16px;
+}

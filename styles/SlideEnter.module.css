@@ -1,0 +1,23 @@
+.hidden {
+	transform: translate3d(100px, 0, 0);
+	/* visibility: hidden; */
+	/* transition: all 0.2s ease; */
+	/* display: none; */
+	pointer-events: none;
+	opacity: 0;
+}
+.item {
+	transition: all 0.2s ease;
+	display: inline-block;
+	position: relative;
+	/* visibility: visible; */
+	z-index: 11;
+	transition-delay: 0;
+	cursor: pointer;
+}
+.hiddenNoDelay {
+	transform: translate3d(100px, 0, 0);
+	/* visibility: hidden; */
+	opacity: 0;
+	transition-delay: 0;
+}
