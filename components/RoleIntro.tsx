@@ -1,6 +1,12 @@
 import Image from 'next/image';
+import amiya from '../public/amiya.png';
 import Audio from '../public/audio.svg';
+import dobin from '../public/dobin.png';
+import hong from '../public/hong.png';
+import kaierxi from '../public/kaierxi.png';
+import lingguan from '../public/lingguan.png';
 import style from '../styles/RoleIntro.module.css';
+
 import BorderText from './BorderText';
 interface RoleIntroProps {
 	id: number;
@@ -13,6 +19,7 @@ interface RoleIntroProps {
 	des: string;
 	show: boolean;
 }
+const imgs = [amiya, kaierxi, hong, dobin, lingguan];
 const RoleIntro = (pros: RoleIntroProps) => {
 	return (
 		<div
@@ -25,7 +32,7 @@ const RoleIntro = (pros: RoleIntroProps) => {
 			// onClick={() => throttled()}
 		>
 			<Image
-				src={pros.img.replace('/public', '')}
+				src={imgs[pros.id % imgs.length]}
 				className={style.img}
 				// width={518}
 				style={{ objectFit: 'contain' }}

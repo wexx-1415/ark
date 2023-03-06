@@ -1,6 +1,12 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useState } from 'react';
+import infected from '../public/infected.fe3e5622b0381b933397.png';
+import nomadic_city from '../public/nomadic_city.0856ca1fc4da54177a9a.png';
+import ori from '../public/originiums.a3d9f6533545b6423c8d.png';
+import ori_art from '../public/originium_arts.13526240f1a6ebaddd0b.png';
+import reunion from '../public/reunion.bc6f43d5a485bd1c161f.png';
+import rhodes_island from '../public/rhodes_island.a8b9f712d951012ec40a.png';
 import style from '../styles/StoryList.module.css';
 import BorderText from './BorderText';
 interface SettingType {
@@ -8,6 +14,7 @@ interface SettingType {
 	en: string;
 	img: string;
 }
+const imgs = [ori, ori_art, reunion, infected, nomadic_city, rhodes_island];
 const settings: SettingType[] = [
 	{
 		zh: '源石',
@@ -47,7 +54,7 @@ const ListItem = ({
 }: {
 	item: SettingType;
 	click?: () => void;
-	index?: number;
+	index: number;
 }) => {
 	const [x, setX] = useState(0);
 	const [y, setY] = useState(0);
@@ -64,7 +71,7 @@ const ListItem = ({
 		>
 			{isin && (
 				<Image
-					src={item.img}
+					src={imgs[index]}
 					width={1024}
 					height={1024}
 					alt=''

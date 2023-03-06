@@ -46,9 +46,8 @@ const CustomElement = ({ page }: { page: number }) => {
 				}}
 			></DotCanvas>
 			<DotCanvas
-				url={'city.png'}
+				url={'/ark/city.png'}
 				width={500}
-				
 				height={500}
 				style={{
 					position: 'absolute',

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Title from '../public/title.png';
 import style from '../styles/MainPage.module.css';
 import BoldText from './BoldText';
 import Download from './Download';
@@ -11,7 +12,7 @@ const MainPage = () => {
 			<Image
 				className={style.title}
 				alt='title'
-				src={'/title.png'}
+				src={Title}
 				width={155}
 				height={77}
 			></Image>

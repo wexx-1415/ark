@@ -9,10 +9,7 @@ import useDelayState from '../util/useDelayState';
 import useThrottle from '../util/useThrottle';
 import useToggleDelayState from '../util/useToggleDelayState';
 import RoleIntro from './RoleIntro';
-const list = [
-	1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-	23, 24, 25, 26, 27, 28, 29, 30,
-];
+
 const ganyuan = [
 	{
 		id: 0,
@@ -220,11 +217,7 @@ const Lists = ({
 					<div
 						className={style.list}
 						style={{ height: height }}
-						onClick={() =>
-							index > count - 1 && index < 2 * count
-								? handleInclick(index)
-								: handleOutclick(index)
-						}
+						onClick={() => handleOutclick(index)}
 						key={item.id}
 					>
 						<ListItem
@@ -241,11 +234,7 @@ const Lists = ({
 					<div
 						className={style.list}
 						style={{ height: height }}
-						onClick={() =>
-							index > count - 1 && index < 2 * count
-								? handleInclick(index)
-								: handleOutclick(index)
-						}
+						onClick={() => handleInclick(index)}
 						key={item.id}
 					>
 						<ListItem
@@ -262,11 +251,7 @@ const Lists = ({
 					<div
 						className={style.list}
 						style={{ height: height }}
-						onClick={() =>
-							index > count - 1 && index < 2 * count
-								? handleInclick(index)
-								: handleOutclick(index)
-						}
+						onClick={() => handleOutclick(index)}
 						key={item.id}
 					>
 						<ListItem

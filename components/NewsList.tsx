@@ -2,6 +2,11 @@ import Image from 'next/image';
 import { useState } from 'react';
 import style from '../styles/NewsList.module.css';
 import Swipe from './Swiper';
+import Swi1 from "../public/b3e2844a59c8b175766b726f8e03f05f.jpg"
+import Swi2 from "../public/57dac7604c0ecee23605448c2303ce47.png"
+import Swi3 from "../public/65e947d1e208cfd7a0a0ee44b7900721.jpg"
+import Swi4 from "../public/292a414a2fe22cecd195511e048f19e8.jpg"
+
 interface NewsType {
 	date: string;
 	type: 'news' | 'activity' | 'announcement';
@@ -195,25 +200,25 @@ const NewsList = () => {
 			<Menu callback={setNews} />
 			<Swipe width={868} dots={<Dot active={false} />}>
 				<Image
-					src={'/b3e2844a59c8b175766b726f8e03f05f.jpg'}
+					src={Swi1}
 					width={868}
 					height={224}
 					alt={''}
 				></Image>
 				<Image
-					src={'/57dac7604c0ecee23605448c2303ce47.png'}
+					src={Swi2}
 					width={868}
 					height={224}
 					alt={''}
 				></Image>
 				<Image
-					src={'/65e947d1e208cfd7a0a0ee44b7900721.jpg'}
+					src={Swi3}
 					width={868}
 					height={224}
 					alt={''}
 				></Image>
 				<Image
-					src={'/292a414a2fe22cecd195511e048f19e8.jpg'}
+					src={Swi4}
 					width={868}
 					height={224}
 					alt={''}

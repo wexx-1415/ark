@@ -19,7 +19,7 @@ const SwipeArrows = ({
 			>
 				<Image
 					alt='上一个'
-					src={'/img/向左.png'}
+					src={'/ark/public/img/向左.png'}
 					width={100}
 					height={100}
 				></Image>
@@ -33,7 +33,7 @@ const SwipeArrows = ({
 			>
 				<Image
 					alt='下一个'
-					src={'/img/下一个.png'}
+					src={'/ark/public/img/下一个.png'}
 					width={100}
 					height={100}
 				></Image>

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import eight from '../public/tx-八边形.png';
+import play from '../public/播放2.png';
 import style from '../styles/VideoPlay.module.css';
-import Modal from './Modal';
 const RadioButton = ({
 	id,
 	text,
@@ -44,21 +45,18 @@ const PlayButton = ({ url }: { url: string }) => {
 		<div className={style.play_wrap} onClick={() => setShow(!show)}>
 			<Image
 				className={style.play_button_wrap}
-				src={'/tx-八边形.png'}
+				src={eight}
 				width={50}
 				height={50}
 				alt={''}
 			></Image>
 			<Image
 				className={style.play_button_play}
-				src={'/播放2.png'}
+				src={play}
 				width={20}
 				height={20}
 				alt={''}
 			></Image>
-			<Modal isModalOpen={show} setIsModalOpen={setShow}>
-				<Image src={url} width={300} height={300} alt={''}></Image>
-			</Modal>
 		</div>
 	);
 };

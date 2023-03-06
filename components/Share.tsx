@@ -1,24 +1,29 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import bililine from '../public/bilibili-line.png';
+import qq from '../public/QQ.png';
+import weibo from '../public/weibo.png';
+import wechat from '../public/微信.png';
+import bili from '../public/截图 2023-01-01 18.15.36.png';
 import style from '../styles/Share.module.css';
 import util from '../styles/util.module.css';
 import Hidden from './Hidden';
 import LoginButton from './LoginButton';
 const imgs = [
 	{
-		src: '/bilibili-line.png',
+		src: bililine,
 		alt: 'bili',
 	},
 	{
-		src: '/微信.png',
+		src: wechat,
 		alt: '微信',
 	},
 	{
-		src: '/weibo.png',
+		src: weibo,
 		alt: '微博',
 	},
 	{
-		src: '/QQ.png',
+		src: qq,
 		alt: 'QQ',
 	},
 ];
@@ -50,7 +55,7 @@ const Share = () => {
 				</div>
 				<Hidden height={28 + 39 * 2} open={open}>
 					<Image
-						src={'/截图 2023-01-01 18.15.36.png'}
+						src={bili}
 						width={119}
 						data-cursor
 						className={util.hoverBright}
@@ -66,13 +71,12 @@ const Share = () => {
 								width={38.5}
 								height={38.5}
 								alt={img.alt}
-								key={img.src}
+								key={img.src.src}
 							/>
 						))}
 					</div>
 				</Hidden>
 			</div>
-			
 		</>
 	);
 };

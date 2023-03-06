@@ -1,15 +1,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import Icon from '../public/icon.e6666cd11b2a7b982b6d.png';
 import style from '../styles/Login.module.css';
 const Header = () => {
 	return (
 		<header className={style.header}>
-			<Image
-				src={'/icon.e6666cd11b2a7b982b6d.png'}
-				width={56}
-				height={56}
-				alt={'logo'}
-			></Image>
+			<Image src={Icon} width={56} height={56} alt={'logo'}></Image>
 			<span>
 				HYPERGRYPH
 				<br></br>
@@ -48,9 +44,12 @@ const Input = ({
 			>
 				{error}
 			</span>
-			<label className={style.input_label}>{label}</label>
+			<label className={style.input_label} htmlFor={label}>
+				{label}
+			</label>
 			<div className={style.input_with_button}>
 				<input
+					id={label}
 					type='text'
 					className={
 						`${!isErrorHidden ? style.input_error_line : ' '}` +
@@ -64,6 +63,7 @@ const Input = ({
 					}}
 				/>
 				<button
+					type='button'
 					className={
 						style.input_button + ' ' + `${button ? ' ' : style.hidden}`
 					}
