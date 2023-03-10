@@ -37,6 +37,7 @@ const RoleIntro = (pros: RoleIntroProps) => {
 				// width={518}
 				style={{ objectFit: 'contain' }}
 				fill
+				priority
 				alt=''
 			></Image>
 			<div className={style.intro}>
